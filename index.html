@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sleep Peacefully. Live Mosquito-Free. BuzzShield is the premium indoor electric mosquito killer lamp using bio-mimetic UV wavelength technology. Safe for babies & pets.">
+  <meta name="keywords" content="mosquito killer, electric mosquito lamp, BuzzShield, insect trap, baby safe mosquito trap, indoor fly catcher">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://buzzshield.co/">
+  <meta property="og:title" content="BuzzShield - Sleep Peacefully. Live Mosquito-Free.">
+  <meta property="og:description" content="Premium, safe, non-toxic electric mosquito killer lamp. Designed for modern homes, bedrooms, and offices.">
+  <meta property="og:image" content="/src/assets/images/buzzshield_pro_core_1783249725251.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://buzzshield.co/">
+  <meta property="twitter:title" content="BuzzShield - Ultimate Electric Mosquito Killer Lamp">
+  <meta property="twitter:description" content="Safe, chemical-free bug zapper for bedrooms and living spaces. Pay online or Order on WhatsApp.">
+  <meta property="twitter:image" content="/src/assets/images/buzzshield_pro_core_1783249725251.jpg">
+
+  <title>BuzzShield | Sleep Peacefully. Live Mosquito-Free.</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Fonts CDN & Lucide CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Supabase CDN (Standard Javascript Client v2) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- Razorpay Checkout SDK -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+  <!-- Config Variable File -->
+  <script src="supabase-config.js"></script>
+
+  <!-- Structured Schema.org Markup for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "BuzzShield Pro Mosquito Killer Lamp",
+    "image": "/src/assets/images/buzzshield_pro_core_1783249725251.jpg",
+    "description": "Premium baby-safe and pet-friendly indoor electric mosquito killer lamp utilizing bio-mimetic UV attraction waves.",
+    "brand": {
+      "@type": "Brand",
+      "name": "BuzzShield"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://buzzshield.co/shop.html",
+      "priceCurrency": "INR",
+      "price": "1499",
+      "priceValidUntil": "2027-12-31",
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "148"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "How does BuzzShield attract and kill mosquitoes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BuzzShield uses a patented 365nm bio-mimetic UV violet light wavelength that mimics human bionic temperature and breath, attracting mosquitoes. Once close, an ultra-quiet vortex suction fan draws them into an escape-proof mesh chamber where they dehydrate naturally and hygienically."
+      }
+    }, {
+      "@type": "Question",
+      "name": "Is it safe for newborns and pets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! BuzzShield is 100% chemical-free, non-toxic, odorless, and radiation-free. It is perfectly safe for pregnant mothers, infants, and household pets. There are no high-voltage zaps or sticky coils."
+      }
+    }, {
+      "@type": "Question",
+      "name": "Can I use it with Cash on Delivery?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely! We provide two convenient payment options: instant secure online payment via UPI, Cards, NetBanking through Razorpay, or Cash on Delivery (COD) which can be confirmed directly via WhatsApp with one simple click."
+      }
+    }]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Floating Demo Mode Notice (Active when credentials are placeholders) -->
+  <div class="demo-banner" id="demo-banner">
+    ✨ <strong>Demo Environment:</strong> Supabase has not been connected yet. Orders and form submissions are currently simulated and saved to LocalStorage.
+  </div>
+
+  <!-- Sticky Navigation Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo-link" id="logo-branding">
+        <span class="logo-accent">Buzz</span>Shield
+      </a>
+
+      <!-- Hamburger Menu for Mobile -->
+      <button class="btn-mobile-menu" aria-label="Toggle Navigation Menu">
+        <i data-lucide="menu"></i>
+      </button>
+
+      <!-- Main Navigation -->
+      <nav class="main-nav" id="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="shop.html" class="nav-link">Shop</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        
+        <div class="nav-actions">
+          <!-- Dark Mode Toggle -->
+          <button class="btn-toggle-theme" aria-label="Toggle Dark Mode">
+            <i data-lucide="moon"></i>
+          </button>
+
+          <!-- Cart Icon -->
+          <a href="#checkout-form" class="btn-cart" aria-label="View Shopping Cart">
+            <i data-lucide="shopping-cart"></i>
+            <span class="cart-count" id="cart-badge-count">1</span>
+          </a>
+
+          <!-- Navigation CTA -->
+          <a href="#checkout-form" class="btn btn-primary">Buy Now</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <h1>Sleep Peacefully. <br><span>Live Mosquito-Free.</span></h1>
+        <p>Protect your family with <strong>BuzzShield</strong>—the chemical-free, whisper-quiet electric mosquito killer lamp that attracts, traps, and dehydrates insects naturally using bionic UV wavelength tech.</p>
+        
+        <div class="hero-actions">
+          <a href="#checkout-form" class="btn btn-primary">Order Now - 50% Off</a>
+          <a href="shop.html" class="btn btn-secondary">Explore Shop</a>
+        </div>
+
+        <div class="hero-badges">
+          <div class="badge-item">
+            <i data-lucide="shield-check"></i>
+            <span>100% Non-Toxic</span>
+          </div>
+          <div class="badge-item">
+            <i data-lucide="baby"></i>
+            <span>Infant & Pet Safe</span>
+          </div>
+          <div class="badge-item">
+            <i data-lucide="sparkles"></i>
+            <span>USB Powered</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <div class="hero-bg-glow"></div>
+        <div class="hero-image-wrapper">
+          <img src="/src/assets/images/buzzshield_pro_core_1783249725251.jpg" alt="BuzzShield UV Mosquito Trapper Lamp in a cozy baby bedroom" class="img-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why BuzzShield Section -->
+  <section class="why-section scroll-reveal">
+    <div class="container">
+      <div class="section-header">
+        <h2>Why <span>BuzzShield</span> Is Better</h2>
+        <p>Unlike harmful sprays, toxic vaporizers, and messy coils, BuzzShield works completely chemical-free to trap flying pests with state-of-the-art biological lures.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="card-icon">
+            <i data-lucide="sparkles"></i>
+          </div>
+          <h3>Bio-Attractant Technology</h3>
+          <p>Utilizes patented 365nm UV waves and micro-thermal emissions to mimic human presence, drawing mosquitoes with pinpoint precision.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="card-icon">
+            <i data-lucide="wind"></i>
+          </div>
+          <h3>Whisper Vortex Trapper</h3>
+          <p>An ultra-quiet suction fan creates a localized vortex, pulling flies into the secure escape-proof basket with zero zap noises.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="card-icon">
+            <i data-lucide="baby"></i>
+          </div>
+          <h3>100% Family & Pet Safe</h3>
+          <p>Completely free of chemicals, smoke, and chemical insecticides. The protective mesh enclosure keeps curious toddler fingers completely safe.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section scroll-reveal">
+    <div class="container">
+      <!-- Feature 1 -->
+      <div class="feature-row">
+        <div class="feature-media">
+          <img src="/src/assets/images/mosquito_lamp_core_1783249771136.jpg" alt="Sleek internal optical core of the mosquito lamp" class="img-cover">
+        </div>
+        <div class="feature-content">
+          <h3>Sleek Engineering Meet Biological Science</h3>
+          <p>Our research and design department crafted a mosquito trap that naturally fits into any home interior while executing continuous protection against malaria, dengue, and zika vectors.</p>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <i data-lucide="check-circle-2"></i>
+              <div>
+                <h4>Smart Ambient Sensor</h4>
+                <p>Turns on automatically in low light and shuts off during daytime, saving electricity.</p>
+              </div>
+            </li>
+            <li class="feature-list-item">
+              <i data-lucide="check-circle-2"></i>
+              <div>
+                <h4>Detachable Waste Mesh</h4>
+                <p>Simply twist open the base containment tray and empty dried insect waste directly in the trash.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="feature-row reverse">
+        <div class="feature-media">
+          <img src="/src/assets/images/silent_sleeping_baby_1783249786550.jpg" alt="Infant sleeping deeply next to BuzzShield lamp" class="img-cover">
+        </div>
+        <div class="feature-content">
+          <h3>Silent Operation For Undisturbed Nights</h3>
+          <p>Say goodbye to the loud, violent crackling noises of old-fashioned electric grid traps. BuzzShield operates below 25dB—equivalent to a gentle rustle of leaves.</p>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <i data-lucide="check-circle-2"></i>
+              <div>
+                <h4>Continuous Airflow Suction</h4>
+                <p>Gentle fan system does not generate heat or toxic vapors while maintaining traps.</p>
+              </div>
+            </li>
+            <li class="feature-list-item">
+              <i data-lucide="check-circle-2"></i>
+              <div>
+                <h4>USB Portable Hookup</h4>
+                <p>Power it easily using standard laptop, power bank, or standard mobile charger plugs. Ideal for travel.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="how-section scroll-reveal">
+    <div class="container">
+      <div class="section-header">
+        <h2>How <span>BuzzShield</span> Works</h2>
+        <p>Three simple bio-engineered steps to reclaim mosquito-free nights for you and your family.</p>
+      </div>
+
+      <div class="how-grid">
+        <div class="how-step">
+          <div class="step-num">01</div>
+          <h3>Attracts</h3>
+          <p>The lamp casts custom 365nm optical waves that pests find completely irresistible.</p>
+        </div>
+        <div class="how-step">
+          <div class="step-num">02</div>
+          <h3>Captures</h3>
+          <p>A continuous vortex vacuum draws incoming insects inside the trap.</p>
+        </div>
+        <div class="how-step">
+          <div class="step-num">03</div>
+          <h3>Dehydrates</h3>
+          <p>Trapped bugs dry naturally and hygienically in the escape-proof basket.</p>
+        </div>
+        <div class="how-step">
+          <div class="step-num">04</div>
+          <h3>Empty</h3>
+          <p>Twist the trap box open once a week to quickly dump dried waste safely.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefits-section scroll-reveal">
+    <div class="container">
+      <div class="section-header">
+        <h2>Unmatched <span>Home Benefits</span></h2>
+        <p>Engineered to deliver health, sanitization, and peace of mind to household rooms.</p>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i data-lucide="heart"></i>
+          </div>
+          <div class="benefit-info">
+            <h3>Dengue & Malaria Guard</h3>
+            <p>Drastically reduces vectors of airborne diseases, shielding vulnerable children and parents.</p>
+          </div>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i data-lucide="ban"></i>
+          </div>
+          <div class="benefit-info">
+            <h3>Zero Smells & Chemicals</h3>
+            <p>No headache-inducing synthetic coils or sticky chemical pesticide residues.</p>
+          </div>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i data-lucide="zap"></i>
+          </div>
+          <div class="benefit-info">
+            <h3>Energy Saving Design</h3>
+            <p>Optimized low-wattage system consumes minimal charge, keeping utilities low.</p>
+          </div>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i data-lucide="compass"></i>
+          </div>
+          <div class="benefit-info">
+            <h3>Outdoor/Camping Companion</h3>
+            <p>Can be plugged into a portable power bank, protecting your family on patios, picnics, and camping.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Before vs After Comparison -->
+  <section class="comparison-section scroll-reveal">
+    <div class="container">
+      <div class="section-header">
+        <h2>Before <span>vs</span> After BuzzShield</h2>
+        <p>Real side-by-side results of introducing biological insect trap technology to family spaces.</p>
+      </div>
+
+      <div class="comparison-container">
+        <div class="compare-box before">
+          <span class="compare-tag">BEFORE</span>
+          <img src="https://picsum.photos/seed/compare-before/600/400" alt="Uncomfortable baby scratched by mosquitos" class="img-cover">
+          <div class="compare-overlay">
+            <h4>Noisy & Painful Nights</h4>
+            <p>Sleeplessness, annoying buzzing, itchy welts, and hazardous chemical spray fumes.</p>
+          </div>
+        </div>
+
+        <div class="compare-box after">
+          <span class="compare-tag">AFTER</span>
+          <img src="https://picsum.photos/seed/compare-after/600/400" alt="Baby sleeping peacefully under soft blue UV light" class="img-cover">
+          <div class="compare-overlay">
+            <h4>Serene & Healthy Rest</h4>
+            <p>Uninterrupted sleep, pristine safe air, and chemical-free insect trapping.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Indoor Usage Guide -->
+  <section class="guide-section specs-section scroll-reveal">
+    <div class="container">
+      <div class="section-header">
+        <h2>Indoor <span>Placement</span> Guide</h2>
+        <p>Maximize your BuzzShield capture rate by placing the traps optimally in your living areas.</p>
+      </div>
+
+      <div class="guide-grid">
+        <div class="guide-card">
+          <div class="guide-icon"><i data-lucide="bed"></i></div>
+          <h3>Bedrooms</h3>
+          <p>Place 3 feet above floor level, away from your bed, turning it on 2 hours before sleeping.</p>
+        </div>
+        <div class="guide-card">
+          <div class="guide-icon"><i data-lucide="smile"></i></div>
+          <h3>Living Rooms</h3>
+          <p>Position near doors, open balconies, or window sill planters where mosquitoes hide.</p>
+        </div>
+        <div class="guide-card">
+          <div class="guide-icon"><i data-lucide="baby"></i></div>
+          <h3>Kids Nurseries</h3>
+          <p>Mount high up safely out of child reach to maintain absolute silence and protection.</p>
+        </div>
+        <div class="guide-card">
+          <div class="guide-icon"><i data-lucide="tree-pine"></i></div>
+          <h3>Patios & Balconies</h3>
+          <p>Plug into a power bank at twilight to block entry lines before pests cross doors.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Specifications Table -->
+  <section class="specs-section scroll-reveal" style="background-color: var(--color-bg-primary);">
+    <div class="container specs-grid">
+      <div class="specs-media">
+        <img src="/src/assets/images/specs_diagram_overview_1783249801854.jpg" alt="BuzzShield specs diagram overview" class="img-cover" style="border-radius: var(--border-radius-md);">
+      </div>
+      <div>
+        <h2 style="font-size: 2.25rem; margin-bottom: 24px; font-family: var(--font-heading);">Product Specifications</h2>
+        <table class="specs-table">
+          <tr>
+            <td class="specs-label">Model</td>
+            <td class="specs-value">BuzzShield BS-Pro 2026 Edition</td>
+          </tr>
+          <tr>
+            <td class="specs-label">Light Source</td>
+            <td class="specs-value">Dual Frequency 365nm Optical LED UV Filament</td>
+          </tr>
+          <tr>
+            <td class="specs-label">Decibel Rating</td>
+            <td class="specs-value">&lt; 25 dB (Whisper Silent Operation)</td>
+          </tr>
+          <tr>
+            <td class="specs-label">Rated Power</td>
+            <td class="specs-value">5 Watts (Continuous low utility draws)</td>
+          </tr>
+          <tr>
+            <td class="specs-label">Input Power</td>
+            <td class="specs-value">5V DC USB Connection (Universal)</td>
+          </tr>
+          <tr>
+            <td class="specs-label">Trap Area Scope</td>
+            <td class="specs-value">20 - 50 square meters (Full room coverage)</td>
+          </tr>
+          <tr>
+            <td class="specs-label">Certifications</td>
+            <td class="specs-value">CE, RoHS, FCC Certified, Chemical-Free</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Gallery -->
+  <section class="gallery-section scroll-reveal" style="background-color: var(--color-bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <h2>BuzzShield <span>Gallery</span></h2>
+        <p>Visualizing BuzzShield integrated beautifully into premium lifestyles and houses.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="/src/assets/images/buzzshield_pro_core_1783249725251.jpg" alt="Living room display" class="img-cover">
+        </div>
+        <div class="gallery-item">
+          <img src="/src/assets/images/mosquito_lamp_core_1783249771136.jpg" alt="Baby nursery night light" class="img-cover">
+        </div>
+        <div class="gallery-item">
+          <img src="/src/assets/images/buzzshield_elite_portable_1783249816132.jpg" alt="Outdoor deck table" class="img-cover">
+        </div>
+        <div class="gallery-item">
+          <img src="/src/assets/images/buzzshield_duo_bundle_1783249828311.jpg" alt="Modern kitchen placement" class="img-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Reviews -->
+  <section class="reviews-section scroll-reveal">
+    <div class="container">
+      <div class="section-header">
+        <h2>What <span>Families</span> Are Saying</h2>
+        <p>With thousands of active installations, BuzzShield has become India's highest-rated organic mosquito trapper.</p>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-rating">
+            <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+          </div>
+          <p>"With an 8-month-old baby, vaporizers made me anxious about fumes. BuzzShield is amazing. It captures mosquitos completely silently. Absolute lifesaver."</p>
+          <div class="review-author">
+            <div class="author-img">
+              <img src="https://picsum.photos/seed/avatar1/100/100" alt="Rohan Sharma" class="img-cover">
+            </div>
+            <div class="author-info">
+              <h4>Rohan Sharma</h4>
+              <span>Verified Buyer, Bangalore</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-rating">
+            <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+          </div>
+          <p>"Excellent product! Extremely light and portable, I take it with me on hotel travels. Free free to use on patios too. Recommended 100%!"</p>
+          <div class="review-author">
+            <div class="author-img">
+              <img src="https://picsum.photos/seed/avatar2/100/100" alt="Ananya Rao" class="img-cover">
+            </div>
+            <div class="author-info">
+              <h4>Ananya Rao</h4>
+              <span>Verified Buyer, Hyderabad</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-rating">
+            <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+          </div>
+          <p>"We used to hear annoying buzzing sound all night. Now our nights are completely quiet. Cleanups are really simple. Worth every single rupee."</p>
+          <div class="review-author">
+            <div class="author-img">
+              <img src="https://picsum.photos/seed/avatar3/100/100" alt="Vikram Malhotra" class="img-cover">
+            </div>
+            <div class="author-info">
+              <h4>Vikram Malhotra</h4>
+              <span>Verified Buyer, Delhi NCR</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section scroll-reveal" style="background-color: var(--color-bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <h2>Frequently Asked <span>Questions</span></h2>
+        <p>Have questions about biological UV lures and shipping? We have compiled responses to typical inquiries.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How does BuzzShield attract and kill mosquitoes?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              BuzzShield uses a patented 365nm bio-mimetic UV violet light wavelength that mimics human bionic temperature and breath, attracting mosquitoes. Once close, an ultra-quiet vortex suction fan draws them into an escape-proof mesh chamber where they dehydrate naturally and hygienically.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Is it safe for newborns and pets?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes! BuzzShield is 100% chemical-free, non-toxic, odorless, and radiation-free. It is perfectly safe for pregnant mothers, infants, and household pets. There are no high-voltage zaps or sticky coils.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>When is the best time and way to run the device?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              For optimal catch rates, run BuzzShield continuous in dark spaces. We suggest turning it on in the bedroom 2-3 hours before you head to sleep, keeping other light sources switched off. This forces insects to lock onto the UV frequency core.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can I use it with Cash on Delivery?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Absolutely! We provide two convenient payment options: instant secure online payment via UPI, Cards, NetBanking through Razorpay, or Cash on Delivery (COD) which can be confirmed directly via WhatsApp with one simple click.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Buy Now Checkout Section (Supabase Orders Table) -->
+  <section class="buy-section scroll-reveal" id="checkout-form-section">
+    <div class="container buy-grid">
+      <div class="buy-info">
+        <h2 style="font-size: 2.5rem; margin-bottom: 16px; font-family: var(--font-heading); color: var(--color-primary);">Get Your BuzzShield Trapping System</h2>
+        <p style="font-size: 1.125rem; margin-bottom: 24px; color: var(--color-text-secondary);">Reclaim high-quality sleep tonight. Order now to secure special **50% Discount** with free shipping across India.</p>
+        
+        <div class="checkout-summary">
+          <h3 style="font-size: 1.2rem; margin-bottom: 16px; font-family: var(--font-heading); color: var(--color-primary);">Selected Package</h3>
+          <div class="checkout-product-details">
+            <img src="/src/assets/images/buzzshield_pro_core_1783249725251.jpg" alt="BuzzShield product small" class="img-contain" style="border-radius: 8px; border: 1px solid var(--color-border); background-color: white; width: 80px; height: 80px;">
+            <div>
+              <h4 id="summary-product-name" style="font-size: 1rem; font-weight: 700; color: var(--color-text-primary);">BuzzShield Pro Mosquito Killer Lamp</h4>
+              <p style="font-size: 0.85rem; color: var(--color-text-light);">5V USB Core Edition • Safety Mesh Guard</p>
+            </div>
+          </div>
+          
+          <div style="margin-top: 20px; border-top: 1px dashed var(--color-border); padding-top: 16px;">
+            <div class="checkout-summary-row">
+              <span style="color: var(--color-text-secondary);">Subtotal Price:</span>
+              <span id="summary-subtotal" style="font-weight: 600; color: var(--color-text-primary);">₹1,499</span>
+            </div>
+            <div class="checkout-summary-row">
+              <span style="color: var(--color-text-secondary);">Quantity Ordered:</span>
+              <span id="summary-qty" style="font-weight: 600; color: var(--color-text-primary);">x1</span>
+            </div>
+            <div class="checkout-summary-row">
+              <span style="color: var(--color-text-secondary);">Government Tax (18% GST):</span>
+              <span id="summary-tax" style="font-weight: 600; color: var(--color-text-primary);">₹270</span>
+            </div>
+            <div class="checkout-summary-row">
+              <span style="color: var(--color-text-secondary);">Express Delivery:</span>
+              <span style="font-weight: 700; color: var(--color-whatsapp);">FREE Shipping</span>
+            </div>
+            <div class="checkout-summary-row">
+              <span>Total Bill (Incl. Taxes):</span>
+              <span id="summary-total" style="color: var(--color-primary); font-size: 1.25rem;">₹1,769</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div class="badge-item" style="font-size: 0.9rem;"><i data-lucide="shield-alert" style="color: var(--color-primary-light);"></i> <span>7 Days Replacement Policy if damaged.</span></div>
+          <div class="badge-item" style="font-size: 0.9rem;"><i data-lucide="truck" style="color: var(--color-primary-light);"></i> <span>Dispatched within 24 hours with tracking.</span></div>
+        </div>
+      </div>
+
+      <div class="buy-form-wrapper" id="checkout-form-wrapper">
+        <h3 style="font-size: 1.5rem; margin-bottom: 24px; font-family: var(--font-heading); color: var(--color-primary);">Shipping & Billing Address</h3>
+        
+        <form id="checkout-form">
+          <div class="form-group">
+            <label for="order-product">Select Package Offer</label>
+            <select id="order-product" class="form-control">
+              <option value="buzzshield-pro" selected>BuzzShield Pro Core Unit — ₹1,499 (Save 50%)</option>
+              <option value="buzzshield-elite">BuzzShield Elite (USB Rechargeable Portable) — ₹1,899</option>
+              <option value="buzzshield-duo">BuzzShield Duo Pack (Double Protection Bundle) — ₹2,699</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="customer-name">Full Name *</label>
+            <input type="text" id="customer-name" placeholder="E.g., Amit Patel" class="form-control" required>
+          </div>
+
+          <div class="form-group-row">
+            <div class="form-group">
+              <label for="customer-phone">Phone Number *</label>
+              <input type="tel" id="customer-phone" placeholder="E.g., 9876543210" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="customer-email">Email Address</label>
+              <input type="email" id="customer-email" placeholder="E.g., amit@example.com" class="form-control">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="customer-address">Complete Delivery Address *</label>
+            <textarea id="customer-address" rows="3" placeholder="Flat No, Building, Street Name, Landmark, City, State, PIN Code" class="form-control" required></textarea>
+          </div>
+
+          <div class="form-group" style="display: flex; justify-content: space-between; align-items: center; margin-top: 24px;">
+            <label style="margin-bottom: 0;">Quantity Selection</label>
+            <div class="quantity-selector">
+              <button type="button" class="quantity-btn" id="qty-minus">-</button>
+              <input type="text" value="1" readonly class="quantity-input" id="checkout-qty">
+              <button type="button" class="quantity-btn" id="qty-plus">+</button>
+            </div>
+          </div>
+
+          <!-- Two Checkout Path Options -->
+          <div class="checkout-actions">
+            <button type="button" class="btn btn-primary" id="btn-checkout-online">
+              <i data-lucide="credit-card"></i> Pay Online (UPI/Cards)
+            </button>
+            <button type="button" class="btn btn-whatsapp" id="btn-checkout-cod">
+              <i data-lucide="message-square"></i> Order COD via WhatsApp
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="contact-section scroll-reveal" id="contact-section">
+    <div class="container contact-grid">
+      <div class="contact-info-wrapper">
+        <h2 style="font-size: 2.25rem; font-family: var(--font-heading); color: var(--color-primary);">Reach Out to Us</h2>
+        <p style="color: var(--color-text-secondary);">Have corporate order inquiries or wholesale trade questions? Send us a message and our support desk will respond within 24 hours.</p>
+        
+        <div class="contact-info-item">
+          <div class="contact-info-icon"><i data-lucide="map-pin"></i></div>
+          <div class="contact-info-text">
+            <h4>Brand Headquarters</h4>
+            <p>BuzzShield Care Tower, Phase II, Sector 5, HSR Layout, Bengaluru, Karnataka, 560102</p>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-info-icon"><i data-lucide="mail"></i></div>
+          <div class="contact-info-text">
+            <h4>Customer Support Desk</h4>
+            <p>support@buzzshield.co • trade@buzzshield.co</p>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-info-icon"><i data-lucide="phone"></i></div>
+          <div class="contact-info-text">
+            <h4>Corporate Assistance Hotline</h4>
+            <p>+91 (080) 4567 8900 (Mon-Sat, 9AM to 6PM)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-wrapper">
+        <h3 style="font-size: 1.5rem; margin-bottom: 24px; font-family: var(--font-heading); color: var(--color-primary);">Send Us a Message</h3>
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="contact-name">Your Full Name *</label>
+            <input type="text" id="contact-name" placeholder="E.g., Rajesh Kumar" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Email Address *</label>
+            <input type="email" id="contact-email" placeholder="E.g., rajesh@example.com" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-subject">Topic / Subject</label>
+            <input type="text" id="contact-subject" placeholder="E.g., Wholesale Inquiry, Warranty Question" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Detailed Message *</label>
+            <textarea id="contact-message" rows="4" placeholder="How can we help you?" class="form-control" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 12px;">Submit Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter bar (Submits directly to Supabase) -->
+  <section class="newsletter-section scroll-reveal">
+    <div class="container newsletter-grid">
+      <div class="newsletter-content">
+        <h2>Join the BuzzShield Circle</h2>
+        <p>Subscribe to our periodic newsletter to receive pest control expert guidelines, safety studies, and dynamic discounts.</p>
+      </div>
+      <div>
+        <form id="newsletter-form" class="newsletter-form">
+          <input type="email" placeholder="Your primary email address" class="form-control" style="flex-grow: 1;" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scroll to Top Button -->
+  <button class="btn-scroll-top" id="btn-scroll-top" aria-label="Scroll back to top">
+    <i data-lucide="chevron-up"></i>
+  </button>
+
+  <!-- Beautiful Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo-link" style="color: white; margin-bottom: 20px;">
+          <span class="logo-accent">Buzz</span>Shield
+        </a>
+        <p>BuzzShield premium electric mosquito traps elevate home sanitization and health standards through patented bio-mimetic lures and escape-proof vortex systems.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook Link"><i data-lucide="facebook"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram Link"><i data-lucide="instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Twitter Link"><i data-lucide="twitter"></i></a>
+          <a href="#" class="social-link" aria-label="Youtube Link"><i data-lucide="youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Product Scope</h3>
+        <ul class="footer-links">
+          <li><a href="shop.html">BuzzShield Pro Unit</a></li>
+          <li><a href="shop.html">BuzzShield Elite Portable</a></li>
+          <li><a href="shop.html">BuzzShield Duo Bundle</a></li>
+          <li><a href="#checkout-form-section">Special 50% Campaign</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Quick Utilities</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home Protection</a></li>
+          <li><a href="blog.html">Pest Control Blog</a></li>
+          <li><a href="contact.html">Support Hotline</a></li>
+          <li><a href="#checkout-form-section">Cash on Delivery</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Certified Protection</h3>
+        <p>Clinically tested to repel and entrap insect vectors including malaria-carrying Anopheles mosquitoes. 100% ozone and mercury radiation safe core.</p>
+        <div style="display: flex; gap: 12px; align-items: center; opacity: 0.8;">
+          <i data-lucide="heart-pulse" style="color: var(--color-accent);"></i>
+          <span style="font-size: 0.85rem; font-weight: 700; color: white;">ISO 9001:2015 Approved Core</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 BuzzShield Inc. All rights reserved. Registered trademark of bio-control systems.</p>
+      <p>Website by <a href="#" style="color: var(--color-accent); font-weight: 700;">ebookcharm Web Services</a></p>
+    </div>
+  </footer>
+
+  <!-- Main script execution -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse our collection of premium BuzzShield electric mosquito trap lamps. Find the perfect device for bedrooms, nurseries, travel, or patios.">
+  <title>Shop BuzzShield | Premium Mosquito Traps Catalog</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+</head>
+<body>
+
+  <!-- Floating Demo Notice -->
+  <div class="demo-banner" id="demo-banner">
+    ✨ <strong>Demo Environment:</strong> Supabase has not been connected yet. Catalog checkouts are simulated.
+  </div>
+
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo-link">
+        <span class="logo-accent">Buzz</span>Shield
+      </a>
+
+      <button class="btn-mobile-menu" aria-label="Toggle Navigation">
+        <i data-lucide="menu"></i>
+      </button>
+
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="shop.html" class="nav-link active">Shop</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        
+        <div class="nav-actions">
+          <button class="btn-toggle-theme" aria-label="Toggle Dark Mode">
+            <i data-lucide="moon"></i>
+          </button>
+          <a href="index.html#checkout-form-section" class="btn-cart">
+            <i data-lucide="shopping-cart"></i>
+            <span class="cart-count">1</span>
+          </a>
+          <a href="index.html#checkout-form-section" class="btn btn-primary">Buy Now</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Shop Hero Section -->
+  <section class="shop-hero">
+    <div class="container">
+      <h1 style="font-size: 3rem; margin-bottom: 12px; font-family: var(--font-heading);">BuzzShield Shop</h1>
+      <p style="color: var(--color-text-secondary); max-width: 600px; margin: 0 auto;">Select from our premium biological mosquito trap systems. Free express shipping on all packages across India.</p>
+    </div>
+  </section>
+
+  <!-- Product Grid Section -->
+  <section style="padding: 60px 0;">
+    <div class="container">
+      <div class="shop-grid">
+        
+        <!-- Product 1 -->
+        <div class="product-card">
+          <div class="product-card-image">
+            <span class="product-card-tag">50% OFF Campaign</span>
+            <img src="/src/assets/images/buzzshield_pro_core_1783249725251.jpg" alt="BuzzShield Pro Core Lamp" class="img-cover">
+          </div>
+          <div class="product-card-content">
+            <h3>BuzzShield Pro Core Unit</h3>
+            <div class="product-card-rating">
+              <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+              <span style="color: var(--color-text-light); font-size: 0.8rem; margin-left: 4px;">(148 Reviews)</span>
+            </div>
+            <p>Our flagship 2026 model featuring dual frequency 365nm UV waves and micro-thermal emissions to mimic human presence. Perfect for bedrooms and dining rooms.</p>
+            <div class="product-card-footer">
+              <span class="product-card-price">₹1,499 <del>₹2,999</del></span>
+              <a href="product-detail.html" class="btn btn-primary" style="padding: 10px 18px; font-size: 0.85rem;">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+          <div class="product-card-image">
+            <span class="product-card-tag">Highly Rated</span>
+            <img src="/src/assets/images/buzzshield_elite_portable_1783249816132.jpg" alt="BuzzShield Elite Rechargeable" class="img-cover">
+          </div>
+          <div class="product-card-content">
+            <h3>BuzzShield Elite Portable</h3>
+            <div class="product-card-rating">
+              <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star-half"></i>
+              <span style="color: var(--color-text-light); font-size: 0.8rem; margin-left: 4px;">(94 Reviews)</span>
+            </div>
+            <p>Equipped with a built-in 4000mAh rechargeable lithium battery. Offers up to 12 hours of cordless protection. Excellent for travel, camping, and open patios.</p>
+            <div class="product-card-footer">
+              <span class="product-card-price">₹1,899 <del>₹3,499</del></span>
+              <a href="product-detail.html?product=elite" class="btn btn-primary" style="padding: 10px 18px; font-size: 0.85rem;">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+          <div class="product-card-image">
+            <span class="product-card-tag" style="background-color: var(--color-whatsapp); color: white;">Best Value Pack</span>
+            <img src="/src/assets/images/buzzshield_duo_bundle_1783249828311.jpg" alt="BuzzShield Duo Dual Protection" class="img-cover">
+          </div>
+          <div class="product-card-content">
+            <h3>BuzzShield Duo Bundle</h3>
+            <div class="product-card-rating">
+              <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+              <span style="color: var(--color-text-light); font-size: 0.8rem; margin-left: 4px;">(230 Reviews)</span>
+            </div>
+            <p>Complete double-room home protection pack containing two BuzzShield Pro units. Shield your nursery and living room concurrently for maximum bio-defense.</p>
+            <div class="product-card-footer">
+              <span class="product-card-price">₹2,699 <del>₹5,999</del></span>
+              <a href="product-detail.html?product=duo" class="btn btn-primary" style="padding: 10px 18px; font-size: 0.85rem;">View Details</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Value Badges -->
+  <section style="background-color: var(--color-bg-secondary); padding: 40px 0;">
+    <div class="container" style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 24px;">
+      <div style="display: flex; align-items: center; gap: 12px; max-width: 280px;">
+        <i data-lucide="truck" style="width: 36px; height: 36px; color: var(--color-primary-light);"></i>
+        <div>
+          <h4 style="font-weight: 700;">Free National Shipping</h4>
+          <p style="font-size: 0.85rem; color: var(--color-text-secondary);">Delivery directly to your doorstep in 3-5 days.</p>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px; max-width: 280px;">
+        <i data-lucide="refresh-cw" style="width: 36px; height: 36px; color: var(--color-primary-light);"></i>
+        <div>
+          <h4 style="font-weight: 700;">7 Days Simple Replacement</h4>
+          <p style="font-size: 0.85rem; color: var(--color-text-secondary);">Simple replacements if any shipping issues occur.</p>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px; max-width: 280px;">
+        <i data-lucide="check-circle" style="width: 36px; height: 36px; color: var(--color-primary-light);"></i>
+        <div>
+          <h4 style="font-weight: 700;">100% Verified Quality</h4>
+          <p style="font-size: 0.85rem; color: var(--color-text-secondary);">Rigorous laboratory safety tests before packaging.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Standard Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo-link" style="color: white; margin-bottom: 20px;">
+          <span class="logo-accent">Buzz</span>Shield
+        </a>
+        <p>BuzzShield premium electric mosquito traps elevate home sanitization and health standards through patented bio-mimetic lures and escape-proof vortex systems.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+          <a href="#" class="social-link" aria-label="Youtube"><i data-lucide="youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Product Scope</h3>
+        <ul class="footer-links">
+          <li><a href="shop.html">BuzzShield Pro Unit</a></li>
+          <li><a href="shop.html">BuzzShield Elite Portable</a></li>
+          <li><a href="shop.html">BuzzShield Duo Bundle</a></li>
+          <li><a href="index.html#checkout-form-section">Special 50% Campaign</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Quick Utilities</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home Protection</a></li>
+          <li><a href="blog.html">Pest Control Blog</a></li>
+          <li><a href="contact.html">Support Hotline</a></li>
+          <li><a href="index.html#checkout-form-section">Cash on Delivery</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Certified Protection</h3>
+        <p>Clinically tested to repel and entrap insect vectors including malaria-carrying Anopheles mosquitoes. 100% ozone and mercury radiation safe core.</p>
+        <div style="display: flex; gap: 12px; align-items: center; opacity: 0.8;">
+          <i data-lucide="heart-pulse" style="color: var(--color-accent);"></i>
+          <span style="font-size: 0.85rem; font-weight: 700; color: white;">ISO 9001:2015 Approved Core</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 BuzzShield Inc. All rights reserved. Registered trademark of bio-control systems.</p>
+      <p>Website by <a href="#" style="color: var(--color-accent); font-weight: 700;">ebookcharm Web Services</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

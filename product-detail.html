@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View specifications, laboratory test results, and customer feedback for the BuzzShield electric mosquito killer lamp. Order now.">
+  <title>BuzzShield Product Details | Safe Electric Mosquito Trapper</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script src="supabase-config.js"></script>
+</head>
+<body>
+
+  <!-- Floating Demo Notice -->
+  <div class="demo-banner" id="demo-banner">
+    ✨ <strong>Demo Environment:</strong> Supabase has not been connected yet. Transactions are simulated.
+  </div>
+
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo-link">
+        <span class="logo-accent">Buzz</span>Shield
+      </a>
+
+      <button class="btn-mobile-menu" aria-label="Toggle Navigation">
+        <i data-lucide="menu"></i>
+      </button>
+
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="shop.html" class="nav-link active">Shop</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        
+        <div class="nav-actions">
+          <button class="btn-toggle-theme" aria-label="Toggle Dark Mode">
+            <i data-lucide="moon"></i>
+          </button>
+          <a href="#checkout-form-section" class="btn-cart">
+            <i data-lucide="shopping-cart"></i>
+            <span class="cart-count" id="cart-badge-count">1</span>
+          </a>
+          <a href="#checkout-form-section" class="btn btn-primary">Buy Now</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Product Detail Showcase Section -->
+  <section style="padding: 60px 0 80px 0;">
+    <div class="container detail-grid">
+      
+      <!-- Product Gallery -->
+      <div class="detail-gallery">
+        <div class="detail-main-img">
+          <img id="detail-main-image" src="/src/assets/images/buzzshield_pro_core_1783249725251.jpg" alt="BuzzShield core lamp main view" class="img-cover">
+        </div>
+        <div class="detail-thumbnails">
+          <button class="detail-thumb active" aria-label="View Image 1">
+            <img src="/src/assets/images/buzzshield_pro_core_1783249725251.jpg" alt="Thumbnail 1" class="img-cover">
+          </button>
+          <button class="detail-thumb" aria-label="View Image 2">
+            <img src="/src/assets/images/mosquito_lamp_core_1783249771136.jpg" alt="Thumbnail 2" class="img-cover">
+          </button>
+          <button class="detail-thumb" aria-label="View Image 3">
+            <img src="/src/assets/images/silent_sleeping_baby_1783249786550.jpg" alt="Thumbnail 3" class="img-cover">
+          </button>
+          <button class="detail-thumb" aria-label="View Image 4">
+            <img src="/src/assets/images/specs_diagram_overview_1783249801854.jpg" alt="Thumbnail 4" class="img-cover">
+          </button>
+        </div>
+      </div>
+
+      <!-- Product Information -->
+      <div class="detail-info">
+        <div class="product-card-rating" style="font-size: 1rem; margin-bottom: 8px;">
+          <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+          <span style="color: var(--color-text-light); font-size: 0.85rem; margin-left: 6px;" id="detail-rating-label">4.9 (148 verified ratings)</span>
+        </div>
+        
+        <h1 id="detail-title">BuzzShield Pro Core Unit</h1>
+        
+        <div class="detail-price-box">
+          <span class="detail-price" id="detail-price-label">₹1,499</span>
+          <del id="detail-original-price-label" style="color: var(--color-text-light); font-size: 1.25rem;">₹2,999</del>
+          <span class="detail-discount">Save 50% Campaign</span>
+        </div>
+
+        <p class="detail-desc" id="detail-description">
+          The industry benchmark for indoor mosquito prevention. Engineered with a bio-mimetic optical filament that emits custom 365nm wave structures, triggering mosquitoes' heat-seeking instincts. Once close, our ultra-quiet 5-watt vortex suction fan traps pests silently, dehydrating them naturally in an escape-proof container. 100% family, baby, and environment friendly.
+        </p>
+
+        <div style="background-color: var(--color-bg-secondary); border: 1px solid var(--color-border); border-radius: var(--border-radius-sm); padding: 20px; margin-bottom: 30px;">
+          <h4 style="font-family: var(--font-heading); margin-bottom: 12px; font-weight: 700;">Key Engineering Highlights</h4>
+          <ul class="feature-list" style="font-size: 0.9rem;">
+            <li class="feature-list-item" style="margin-bottom: 10px;">
+              <i data-lucide="check" style="width: 16px; height: 16px;"></i>
+              <span>Patented 365nm UV attraction wavelength core</span>
+            </li>
+            <li class="feature-list-item" style="margin-bottom: 10px;">
+              <i data-lucide="check" style="width: 16px; height: 16px;"></i>
+              <span>Noiseless ventilation vacuum (under 25 decibels)</span>
+            </li>
+            <li class="feature-list-item" style="margin-bottom: 10px;">
+              <i data-lucide="check" style="width: 16px; height: 16px;"></i>
+              <span>Universal USB micro power supply interface</span>
+            </li>
+            <li class="feature-list-item">
+              <i data-lucide="check" style="width: 16px; height: 16px;"></i>
+              <span>Escape-proof twisting basket with washable core tray</span>
+            </li>
+          </ul>
+        </div>
+
+        <a href="#checkout-form-section" class="btn btn-primary" style="width: 100%; padding: 16px 32px; font-size: 1.1rem;">Proceed to Shipping Details</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Product Customization Script (Vanilla JS query reader) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const productType = urlParams.get("product") || "pro";
+
+      const titleEl = document.getElementById("detail-title");
+      const descEl = document.getElementById("detail-description");
+      const priceLabel = document.getElementById("detail-price-label");
+      const originalPriceLabel = document.getElementById("detail-original-price-label");
+      const ratingLabel = document.getElementById("detail-rating-label");
+      const selectBox = document.getElementById("order-product");
+
+      // Dynamic Assets
+      const mainImg = document.getElementById("detail-main-image");
+      const thumbs = document.querySelectorAll(".detail-thumb img");
+
+      if (productType === "elite") {
+        titleEl.textContent = "BuzzShield Elite Portable";
+        priceLabel.textContent = "₹1,899";
+        originalPriceLabel.textContent = "₹3,499";
+        ratingLabel.textContent = "4.8 (94 verified ratings)";
+        descEl.textContent = "Take ultimate mosquito defense wherever you go. The BuzzShield Elite is equipped with a high-capacity 4000mAh lithium-ion rechargeable battery, offering up to 12 hours of chemical-free protection on a single charge. Designed with an elegant leather hanging handle, it's the premium choice for outdoor terraces, hotel travels, camping, and emergency power cutouts.";
+        
+        // Update images to differentiate product
+        mainImg.setAttribute("src", "/src/assets/images/buzzshield_elite_portable_1783249816132.jpg");
+        thumbs[0].setAttribute("src", "/src/assets/images/buzzshield_elite_portable_1783249816132.jpg");
+        thumbs[1].setAttribute("src", "/src/assets/images/mosquito_lamp_core_1783249771136.jpg");
+        thumbs[2].setAttribute("src", "/src/assets/images/silent_sleeping_baby_1783249786550.jpg");
+        thumbs[3].setAttribute("src", "/src/assets/images/specs_diagram_overview_1783249801854.jpg");
+
+        if (selectBox) selectBox.value = "buzzshield-elite";
+      } else if (productType === "duo") {
+        titleEl.textContent = "BuzzShield Duo Bundle";
+        priceLabel.textContent = "₹2,699";
+        originalPriceLabel.textContent = "₹5,999";
+        ratingLabel.textContent = "5.0 (230 verified ratings)";
+        descEl.textContent = "Our best value protection bundle for multi-room houses. The BuzzShield Duo pack includes two of our flagship BuzzShield Pro Core units, enabling you to safeguard your newborn's nursery and your master living room simultaneously. Reclaim premium sleep across your entire home and save an additional ₹300 with this bundle.";
+        
+        mainImg.setAttribute("src", "/src/assets/images/buzzshield_duo_bundle_1783249828311.jpg");
+        thumbs[0].setAttribute("src", "/src/assets/images/buzzshield_duo_bundle_1783249828311.jpg");
+        thumbs[1].setAttribute("src", "/src/assets/images/duo_detail_view_1783249841676.jpg");
+        thumbs[2].setAttribute("src", "/src/assets/images/silent_sleeping_baby_1783249786550.jpg");
+        thumbs[3].setAttribute("src", "/src/assets/images/specs_diagram_overview_1783249801854.jpg");
+
+        if (selectBox) selectBox.value = "buzzshield-duo";
+      }
+    });
+  </script>
+
+  <!-- Checkout Section (Same structure as index.html for UX conversion integrity) -->
+  <section class="buy-section scroll-reveal" id="checkout-form-section">
+    <div class="container buy-grid">
+      <div class="buy-info">
+        <h2 style="font-size: 2.25rem; margin-bottom: 16px; font-family: var(--font-heading); color: var(--color-primary);">Complete Your Order</h2>
+        <p style="margin-bottom: 24px; color: var(--color-text-secondary);">Fill in your shipping details below to place your order securely. Enjoy free doorstep delivery.</p>
+        
+        <div class="checkout-summary">
+          <h3 style="font-size: 1.2rem; margin-bottom: 16px; font-family: var(--font-heading); color: var(--color-primary);">Selected Package</h3>
+          <div class="checkout-product-details">
+            <img src="/src/assets/images/buzzshield_pro_core_1783249725251.jpg" alt="BuzzShield core" class="img-contain" style="border-radius: 8px; border: 1px solid var(--color-border); background-color: white; width: 80px; height: 80px;">
+            <div>
+              <h4 id="summary-product-name" style="font-size: 1rem; font-weight: 700; color: var(--color-text-primary);">BuzzShield Pro Mosquito Killer Lamp</h4>
+              <p style="font-size: 0.85rem; color: var(--color-text-light);">5V USB Core Edition • Safety Mesh Guard</p>
+            </div>
+          </div>
+          
+          <div style="margin-top: 20px; border-top: 1px dashed var(--color-border); padding-top: 16px;">
+            <div class="checkout-summary-row">
+              <span style="color: var(--color-text-secondary);">Subtotal Price:</span>
+              <span id="summary-subtotal" style="font-weight: 600; color: var(--color-text-primary);">₹1,499</span>
+            </div>
+            <div class="checkout-summary-row">
+              <span style="color: var(--color-text-secondary);">Quantity Ordered:</span>
+              <span id="summary-qty" style="font-weight: 600; color: var(--color-text-primary);">x1</span>
+            </div>
+            <div class="checkout-summary-row">
+              <span style="color: var(--color-text-secondary);">Government Tax (18% GST):</span>
+              <span id="summary-tax" style="font-weight: 600; color: var(--color-text-primary);">₹270</span>
+            </div>
+            <div class="checkout-summary-row">
+              <span style="color: var(--color-text-secondary);">Express Delivery:</span>
+              <span style="font-weight: 700; color: var(--color-whatsapp);">FREE Shipping</span>
+            </div>
+            <div class="checkout-summary-row">
+              <span>Total Bill (Incl. Taxes):</span>
+              <span id="summary-total" style="color: var(--color-primary); font-size: 1.25rem;">₹1,769</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="buy-form-wrapper" id="checkout-form-wrapper">
+        <h3 style="font-size: 1.5rem; margin-bottom: 24px; font-family: var(--font-heading); color: var(--color-primary);">Shipping & Billing Address</h3>
+        
+        <form id="checkout-form">
+          <div class="form-group">
+            <label for="order-product">Select Package Offer</label>
+            <select id="order-product" class="form-control">
+              <option value="buzzshield-pro" selected>BuzzShield Pro Core Unit — ₹1,499 (Save 50%)</option>
+              <option value="buzzshield-elite">BuzzShield Elite (USB Rechargeable Portable) — ₹1,899</option>
+              <option value="buzzshield-duo">BuzzShield Duo Pack (Double Protection Bundle) — ₹2,699</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="customer-name">Full Name *</label>
+            <input type="text" id="customer-name" placeholder="E.g., Amit Patel" class="form-control" required>
+          </div>
+
+          <div class="form-group-row">
+            <div class="form-group">
+              <label for="customer-phone">Phone Number *</label>
+              <input type="tel" id="customer-phone" placeholder="E.g., 9876543210" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="customer-email">Email Address</label>
+              <input type="email" id="customer-email" placeholder="E.g., amit@example.com" class="form-control">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="customer-address">Complete Delivery Address *</label>
+            <textarea id="customer-address" rows="3" placeholder="Flat No, Building, Street Name, Landmark, City, State, PIN Code" class="form-control" required></textarea>
+          </div>
+
+          <div class="form-group" style="display: flex; justify-content: space-between; align-items: center; margin-top: 24px;">
+            <label style="margin-bottom: 0;">Quantity Selection</label>
+            <div class="quantity-selector">
+              <button type="button" class="quantity-btn" id="qty-minus">-</button>
+              <input type="text" value="1" readonly class="quantity-input" id="checkout-qty">
+              <button type="button" class="quantity-btn" id="qty-plus">+</button>
+            </div>
+          </div>
+
+          <!-- Checkout Buttons -->
+          <div class="checkout-actions">
+            <button type="button" class="btn btn-primary" id="btn-checkout-online">
+              <i data-lucide="credit-card"></i> Pay Online (UPI/Cards)
+            </button>
+            <button type="button" class="btn btn-whatsapp" id="btn-checkout-cod">
+              <i data-lucide="message-square"></i> Order COD via WhatsApp
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Standard Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo-link" style="color: white; margin-bottom: 20px;">
+          <span class="logo-accent">Buzz</span>Shield
+        </a>
+        <p>BuzzShield premium electric mosquito traps elevate home sanitization and health standards through patented bio-mimetic lures and escape-proof vortex systems.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+          <a href="#" class="social-link" aria-label="Youtube"><i data-lucide="youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Product Scope</h3>
+        <ul class="footer-links">
+          <li><a href="shop.html">BuzzShield Pro Unit</a></li>
+          <li><a href="shop.html">BuzzShield Elite Portable</a></li>
+          <li><a href="shop.html">BuzzShield Duo Bundle</a></li>
+          <li><a href="index.html#checkout-form-section">Special 50% Campaign</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Quick Utilities</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home Protection</a></li>
+          <li><a href="blog.html">Pest Control Blog</a></li>
+          <li><a href="contact.html">Support Hotline</a></li>
+          <li><a href="index.html#checkout-form-section">Cash on Delivery</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Certified Protection</h3>
+        <p>Clinically tested to repel and entrap insect vectors including malaria-carrying Anopheles mosquitoes. 100% ozone and mercury radiation safe core.</p>
+        <div style="display: flex; gap: 12px; align-items: center; opacity: 0.8;">
+          <i data-lucide="heart-pulse" style="color: var(--color-accent);"></i>
+          <span style="font-size: 0.85rem; font-weight: 700; color: white;">ISO 9001:2015 Approved Core</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 BuzzShield Inc. All rights reserved. Registered trademark of bio-control systems.</p>
+      <p>Website by <a href="#" style="color: var(--color-accent); font-weight: 700;">ebookcharm Web Services</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

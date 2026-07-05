@@ -1,0 +1,6 @@
+{
+  "name": "BuzzShield",
+  "description": "Sleep Peacefully. Live Mosquito-Free. Premium electric mosquito killer lamp product website with Supabase and Razorpay integration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

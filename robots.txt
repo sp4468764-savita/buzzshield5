@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /supabase/
+
+Sitemap: https://buzzshield.co/sitemap.xml

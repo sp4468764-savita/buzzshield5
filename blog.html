@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Read expert insect control guides, pediatric protection guidelines, and laboratory study updates from the scientists and engineers at BuzzShield.">
+  <title>BuzzShield Wellness Blog | Baby Safety & Biological Insect Defense</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+</head>
+<body>
+
+  <!-- Floating Demo Notice -->
+  <div class="demo-banner" id="demo-banner">
+    ✨ <strong>Demo Environment:</strong> Supabase has not been connected yet. Newsletter and forms run in mock simulation.
+  </div>
+
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo-link">
+        <span class="logo-accent">Buzz</span>Shield
+      </a>
+
+      <button class="btn-mobile-menu" aria-label="Toggle Navigation">
+        <i data-lucide="menu"></i>
+      </button>
+
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="shop.html" class="nav-link">Shop</a></li>
+          <li><a href="blog.html" class="nav-link active">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        
+        <div class="nav-actions">
+          <button class="btn-toggle-theme" aria-label="Toggle Dark Mode">
+            <i data-lucide="moon"></i>
+          </button>
+          <a href="index.html#checkout-form-section" class="btn-cart">
+            <i data-lucide="shopping-cart"></i>
+            <span class="cart-count">1</span>
+          </a>
+          <a href="index.html#checkout-form-section" class="btn btn-primary">Buy Now</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Blog Banner -->
+  <section class="shop-hero" style="background: linear-gradient(135deg, rgba(13, 59, 62, 0.05) 0%, rgba(164, 255, 63, 0.05) 100%);">
+    <div class="container">
+      <h1 style="font-size: 3rem; margin-bottom: 12px; font-family: var(--font-heading);">BuzzShield Care Blog</h1>
+      <p style="color: var(--color-text-secondary); max-width: 600px; margin: 0 auto;">Guidelines and medical studies about home pest prevention, child hygiene, and biological insect trap developments.</p>
+    </div>
+  </section>
+
+  <!-- Blog Grid -->
+  <section style="padding: 60px 0 80px 0;">
+    <div class="container">
+      <div class="blog-grid">
+        
+        <!-- Article 1 -->
+        <article class="blog-card">
+          <div class="blog-card-image">
+            <img src="/src/assets/images/silent_sleeping_baby_1783249786550.jpg" alt="Newborn baby sleeping peacefully under safe light" class="img-cover">
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-card-meta">
+              <span><i data-lucide="calendar" style="width: 12px; height: 12px; vertical-align: middle; margin-right: 4px;"></i>July 2, 2026</span>
+              <span><i data-lucide="clock" style="width: 12px; height: 12px; vertical-align: middle; margin-right: 4px;"></i>5 min read</span>
+            </div>
+            <h3>Why Chemical Vaporizers Are Hazardous for Infants</h3>
+            <p>Pediatric studies warn that common chemical vaporizers, coils, and insecticides release synthetic pyrethroids which can affect developing respiratory pathways. Learn how organic traps offer safe defense.</p>
+            <a href="#" class="blog-read-more">Read Full Study <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i></a>
+          </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="blog-card">
+          <div class="blog-card-image">
+            <img src="/src/assets/images/mosquito_lamp_core_1783249771136.jpg" alt="Close up of optical ultraviolet spectrum core" class="img-cover">
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-card-meta">
+              <span><i data-lucide="calendar" style="width: 12px; height: 12px; vertical-align: middle; margin-right: 4px;"></i>June 24, 2026</span>
+              <span><i data-lucide="clock" style="width: 12px; height: 12px; vertical-align: middle; margin-right: 4px;"></i>7 min read</span>
+            </div>
+            <h3>The Science Behind Patented 365nm UV Light Frequency</h3>
+            <p>Not all ultraviolet wavelengths trap mosquitoes equally. Our engineers breakdown how specific bio-mimetic light curves lock onto flying insect heat sensors while remaining invisible and safe to human eyes.</p>
+            <a href="#" class="blog-read-more">Read Full Study <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i></a>
+          </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="blog-card">
+          <div class="blog-card-image">
+            <img src="https://picsum.photos/seed/blog-monsoon/500/320" alt="Rain drops on window sill with green trees" class="img-cover">
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-card-meta">
+              <span><i data-lucide="calendar" style="width: 12px; height: 12px; vertical-align: middle; margin-right: 4px;"></i>May 18, 2026</span>
+              <span><i data-lucide="clock" style="width: 12px; height: 12px; vertical-align: middle; margin-right: 4px;"></i>6 min read</span>
+            </div>
+            <h3>Monsoon Survival Guide: Shielding Homes From Dengue</h3>
+            <p>Standing waters and damp air trigger massive insect breeding cycles during monsoon months. Read our clinical checklist of physical sweeps and device placement guidelines to keep your house mosquito-free.</p>
+            <a href="#" class="blog-read-more">Read Full Study <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter bar -->
+  <section class="newsletter-section">
+    <div class="container newsletter-grid">
+      <div class="newsletter-content">
+        <h2>Join the BuzzShield Circle</h2>
+        <p>Subscribe to our periodic newsletter to receive pest control expert guidelines, safety studies, and dynamic discounts.</p>
+      </div>
+      <div>
+        <form id="newsletter-form" class="newsletter-form">
+          <input type="email" placeholder="Your primary email address" class="form-control" style="flex-grow: 1;" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Standard Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo-link" style="color: white; margin-bottom: 20px;">
+          <span class="logo-accent">Buzz</span>Shield
+        </a>
+        <p>BuzzShield premium electric mosquito traps elevate home sanitization and health standards through patented bio-mimetic lures and escape-proof vortex systems.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+          <a href="#" class="social-link" aria-label="Youtube"><i data-lucide="youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Product Scope</h3>
+        <ul class="footer-links">
+          <li><a href="shop.html">BuzzShield Pro Unit</a></li>
+          <li><a href="shop.html">BuzzShield Elite Portable</a></li>
+          <li><a href="shop.html">BuzzShield Duo Bundle</a></li>
+          <li><a href="index.html#checkout-form-section">Special 50% Campaign</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Quick Utilities</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home Protection</a></li>
+          <li><a href="blog.html">Pest Control Blog</a></li>
+          <li><a href="contact.html">Support Hotline</a></li>
+          <li><a href="index.html#checkout-form-section">Cash on Delivery</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Certified Protection</h3>
+        <p>Clinically tested to repel and entrap insect vectors including malaria-carrying Anopheles mosquitoes. 100% ozone and mercury radiation safe core.</p>
+        <div style="display: flex; gap: 12px; align-items: center; opacity: 0.8;">
+          <i data-lucide="heart-pulse" style="color: var(--color-accent);"></i>
+          <span style="font-size: 0.85rem; font-weight: 700; color: white;">ISO 9001:2015 Approved Core</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 BuzzShield Inc. All rights reserved. Registered trademark of bio-control systems.</p>
+      <p>Website by <a href="#" style="color: var(--color-accent); font-weight: 700;">ebookcharm Web Services</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
